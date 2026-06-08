@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: REPLACE_WITH_GITHUB_USER/oliverdvh-site
+  repo: oliverdvh/oliverdvh-site
   branch: main
 
 # After saving, Cloudflare Pages will rebuild and the change goes live in ~30 seconds.
