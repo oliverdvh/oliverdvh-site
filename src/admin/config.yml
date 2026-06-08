@@ -26,6 +26,7 @@ collections:
       - name: "home"
         label: "Home page"
         file: "src/index.md"
+        format: "yaml-frontmatter"
         fields:
           - { label: "Page title (browser tab)", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -100,6 +101,7 @@ collections:
       - name: "about"
         label: "About page"
         file: "src/about.md"
+        format: "yaml-frontmatter"
         fields:
           - { label: "Page title (browser tab)", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -133,6 +135,7 @@ collections:
       - name: "writing"
         label: "Writing page"
         file: "src/writing.md"
+        format: "yaml-frontmatter"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -219,6 +222,7 @@ collections:
       - name: "speaking"
         label: "Teaching, speaking & advisory"
         file: "src/speaking.md"
+        format: "yaml-frontmatter"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -295,6 +299,7 @@ collections:
       - name: "book"
         label: "Book page"
         file: "src/book.md"
+        format: "yaml-frontmatter"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -333,6 +338,7 @@ collections:
       - name: "contact"
         label: "Contact page"
         file: "src/contact.md"
+        format: "yaml-frontmatter"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
