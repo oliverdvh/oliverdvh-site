@@ -3,6 +3,7 @@ backend:
   repo: oliverdvh/oliverdvh-site
   branch: main
   base_url: https://decap-oauth.olliedvh.workers.dev
+
 # After saving, Cloudflare Pages will rebuild and the change goes live in ~30 seconds.
 publish_mode: simple
 media_folder: "src/assets/uploads"
@@ -24,10 +25,7 @@ collections:
       # ---------- HOME ----------
       - name: "home"
         label: "Home page"
-        file: "src/index.njk"
-        extension: "njk"
-        format: "frontmatter"
-        frontmatter_delimiter: "---"
+        file: "src/index.md"
         fields:
           - { label: "Page title (browser tab)", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -101,10 +99,7 @@ collections:
       # ---------- ABOUT ----------
       - name: "about"
         label: "About page"
-        file: "src/about.njk"
-        extension: "njk"
-        format: "frontmatter"
-        frontmatter_delimiter: "---"
+        file: "src/about.md"
         fields:
           - { label: "Page title (browser tab)", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -137,10 +132,7 @@ collections:
       # ---------- WRITING ----------
       - name: "writing"
         label: "Writing page"
-        file: "src/writing.njk"
-        extension: "njk"
-        format: "frontmatter"
-        frontmatter_delimiter: "---"
+        file: "src/writing.md"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -226,10 +218,7 @@ collections:
       # ---------- SPEAKING ----------
       - name: "speaking"
         label: "Teaching, speaking & advisory"
-        file: "src/speaking.njk"
-        extension: "njk"
-        format: "frontmatter"
-        frontmatter_delimiter: "---"
+        file: "src/speaking.md"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -305,10 +294,7 @@ collections:
       # ---------- BOOK ----------
       - name: "book"
         label: "Book page"
-        file: "src/book.njk"
-        extension: "njk"
-        format: "frontmatter"
-        frontmatter_delimiter: "---"
+        file: "src/book.md"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -346,10 +332,7 @@ collections:
       # ---------- CONTACT ----------
       - name: "contact"
         label: "Contact page"
-        file: "src/contact.njk"
-        extension: "njk"
-        format: "frontmatter"
-        frontmatter_delimiter: "---"
+        file: "src/contact.md"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
