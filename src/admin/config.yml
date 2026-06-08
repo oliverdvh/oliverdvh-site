@@ -27,6 +27,7 @@ collections:
         file: "src/index.njk"
         extension: "njk"
         format: "frontmatter"
+        frontmatter_delimiter: "---"
         fields:
           - { label: "Page title (browser tab)", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -103,6 +104,7 @@ collections:
         file: "src/about.njk"
         extension: "njk"
         format: "frontmatter"
+        frontmatter_delimiter: "---"
         fields:
           - { label: "Page title (browser tab)", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -138,6 +140,7 @@ collections:
         file: "src/writing.njk"
         extension: "njk"
         format: "frontmatter"
+        frontmatter_delimiter: "---"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -226,6 +229,7 @@ collections:
         file: "src/speaking.njk"
         extension: "njk"
         format: "frontmatter"
+        frontmatter_delimiter: "---"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -304,6 +308,7 @@ collections:
         file: "src/book.njk"
         extension: "njk"
         format: "frontmatter"
+        frontmatter_delimiter: "---"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
@@ -344,6 +349,7 @@ collections:
         file: "src/contact.njk"
         extension: "njk"
         format: "frontmatter"
+        frontmatter_delimiter: "---"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
           - { label: "Search description", name: "description", widget: "text" }
