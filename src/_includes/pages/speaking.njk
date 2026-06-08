@@ -1,0 +1,99 @@
+---
+layout: base.njk
+---
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">{{ hero.eyebrow }}</span>
+    <h1>{{ hero.headline }} <span class="italic-accent">{{ hero.headlineItalic }}</span></h1>
+    <p class="lede mt-1">{{ hero.lede }}</p>
+    <div class="hero-actions mt-2">
+      <a class="btn btn-primary btn-arrow" href="{{ hero.ctaUrl }}">{{ hero.ctaLabel }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <span class="eyebrow">{{ teaching.eyebrow }}</span>
+    <h2>{{ teaching.heading }}</h2>
+    <p class="lede mt-1" style="max-width: 62ch;">{{ teaching.lede | safe }}</p>
+
+    <div class="format-grid mt-3">
+      {% for f in teaching.formats %}
+      <div class="format">
+        <h4>{{ f.heading }}</h4>
+        <p>{{ f.body | safe }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h3 class="mt-4">{{ teaching.topicsHeading }}</h3>
+    <div class="cards mt-2">
+      {% for t in teaching.topics %}
+      <article class="card">
+        <span class="card-eyebrow">{{ t.eyebrow }}</span>
+        <h4>{{ t.heading }}</h4>
+        <p>{{ t.body | safe }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">{{ advisory.eyebrow }}</span>
+    <h2>{{ advisory.heading }}</h2>
+    <p class="lede mt-1" style="max-width: 62ch;">{{ advisory.lede }}</p>
+
+    <div class="format-grid mt-3">
+      {% for f in advisory.formats %}
+      <div class="format">
+        <h4>{{ f.heading }}</h4>
+        <p>{{ f.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <p class="muted mt-3" style="font-family: var(--font-ui); font-size: 0.92rem;">{{ advisory.clientsNote }}</p>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <span class="eyebrow">{{ speaking.eyebrow }}</span>
+    <h2>{{ speaking.heading }}</h2>
+    <p class="lede mt-1" style="max-width: 62ch;">{{ speaking.lede }}</p>
+
+    <div class="cards mt-3">
+      {% for t in speaking.topics %}
+      <article class="card">
+        <span class="card-eyebrow">{{ t.eyebrow }}</span>
+        <h4>{{ t.heading }}</h4>
+        <p>{{ t.body }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container text-center">
+    <span class="eyebrow">Affiliations & credentials</span>
+    <div class="logos mt-2">
+      <a href="{{ site.cislUrl }}" target="_blank" rel="noopener">Cambridge · CISL Fellow</a>
+      <a href="{{ site.cuspUrl }}" target="_blank" rel="noopener">CUSP Fellow</a>
+      <span>INSEAD MBA</span>
+      <span>Leiden Master of Law</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container text-center">
+    <h2>{{ closing.heading }}</h2>
+    <p class="lede" style="margin: 0.4rem auto 1.6rem; max-width: 50ch;">{{ closing.lede }}</p>
+    <a class="btn btn-primary btn-arrow" href="{{ closing.ctaUrl }}">{{ closing.ctaLabel }}</a>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+---
+layout: base.njk
+---
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">{{ hero.eyebrow }}</span>
+    <h1>{{ hero.headline }} <span class="italic-accent">{{ hero.headlineItalic }}</span></h1>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="split">
+      <div class="prose">
+        <p class="lede" style="max-width: 50ch;">{{ lede }}</p>
+        {% for para in paragraphs %}
+        <p>{{ para | safe }}</p>
+        {% endfor %}
+
+        <h2>{{ dayToDayHeading }}</h2>
+        <ul>
+          {% for item in dayToDay %}<li>{{ item | safe }}</li>{% endfor %}
+        </ul>
+
+        <h2>{{ shortVersionHeading }}</h2>
+        <ul>
+          {% for item in shortVersion %}<li>{{ item | safe }}</li>{% endfor %}
+        </ul>
+      </div>
+      <aside>
+        <div class="hero-portrait" style="max-width: 380px; margin-bottom: 1.5rem;">
+          <img src="/assets/oliver.jpg" alt="Portrait of Oliver Dudok van Heel" />
+        </div>
+        <blockquote class="pullquote">
+          {{ pullquote }}
+          <span class="pullquote-attrib">{{ pullquoteAttrib }}</span>
+        </blockquote>
+      </aside>
+    </div>
+  </div>
+</section>

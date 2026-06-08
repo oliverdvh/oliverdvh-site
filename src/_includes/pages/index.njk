@@ -1,0 +1,110 @@
+---
+layout: base.njk
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">{{ hero.eyebrow }}</span>
+      <h1>{{ hero.headline }} <span class="italic-accent">{{ hero.headlineItalic }}</span></h1>
+      <p class="lede">{{ hero.lede }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-arrow" href="{{ hero.primaryCtaUrl }}">{{ hero.primaryCtaLabel }}</a>
+        <a class="btn btn-secondary" href="{{ hero.secondaryCtaUrl }}">{{ hero.secondaryCtaLabel }}</a>
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <img src="/assets/oliver.jpg" alt="Portrait of Oliver Dudok van Heel" />
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <span class="eyebrow">{{ pillarsIntro.eyebrow }}</span>
+    <h2>{{ pillarsIntro.heading }}</h2>
+    <p class="lede mt-1" style="max-width: 56ch;">{{ pillarsIntro.lede }}</p>
+
+    <div class="pillars mt-3">
+      <article class="pillar">
+        <span class="pillar-num">{{ pillarOne.num }}</span>
+        <h3>{{ pillarOne.heading }}</h3>
+        <p>{{ pillarOne.body }}</p>
+        <ul>
+          {% for b in pillarOne.bullets %}<li>{{ b }}</li>{% endfor %}
+        </ul>
+      </article>
+      <article class="pillar">
+        <span class="pillar-num">{{ pillarTwo.num }}</span>
+        <h3>{{ pillarTwo.heading }}</h3>
+        <p>{{ pillarTwo.body }}</p>
+        <ul>
+          {% for b in pillarTwo.bullets %}<li>{{ b }}</li>{% endfor %}
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container text-center">
+    <span class="eyebrow">Affiliations</span>
+    <div class="logos mt-2">
+      <a href="{{ site.cislUrl }}" target="_blank" rel="noopener">Cambridge Institute for Sustainability Leadership</a>
+      <a href="{{ site.cuspUrl }}" target="_blank" rel="noopener">Centre for the Understanding of Sustainable Prosperity</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:end; gap:1rem; flex-wrap:wrap; margin-bottom:2rem;">
+      <div>
+        <span class="eyebrow">{{ writingTeaser.eyebrow }}</span>
+        <h2 class="mb-0">{{ writingTeaser.heading }}</h2>
+      </div>
+      <a class="btn btn-secondary" href="{{ writingTeaser.ctaUrl }}">{{ writingTeaser.ctaLabel }}</a>
+    </div>
+
+    <div class="writing-list" data-substack-feed="true" data-limit="4">
+      {% for p in writingTeaser.fallbackPosts %}
+      <a class="writing-item" href="{{ p.url }}" target="_blank" rel="noopener">
+        <span class="writing-date">{{ p.date }}</span>
+        <span class="writing-title">{{ p.title }}</span>
+        <span class="writing-meta">Substack</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="book-panel">
+      <div class="book-cover">
+        <div class="book-cover-text">Changing Stories,<br/><em>Finding Hope.</em></div>
+      </div>
+      <div>
+        <span class="eyebrow">{{ bookPanel.eyebrow }}</span>
+        <h2>{{ bookPanel.heading }}</h2>
+        <p>{{ bookPanel.body1 }}</p>
+        <p>{{ bookPanel.body2 }}</p>
+        <div class="hero-actions mt-2">
+          <a class="btn btn-primary btn-arrow" href="{{ site.bookSiteUrl }}" target="_blank" rel="noopener">Visit the book site</a>
+          <a class="btn btn-secondary" href="/book/">More about the book</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="subscribe-cta">
+      <span class="eyebrow" style="color: rgba(255, 250, 242, 0.7);">{{ subscribe.eyebrow }}</span>
+      <h2>{{ subscribe.heading }}</h2>
+      <p>{{ subscribe.body }}</p>
+      <a class="btn btn-primary btn-arrow" href="{{ site.substackUrl }}" target="_blank" rel="noopener">Subscribe on Substack</a>
+    </div>
+  </div>
+</section>

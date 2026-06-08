@@ -1,0 +1,48 @@
+---
+layout: base.njk
+---
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">{{ hero.eyebrow }}</span>
+    <h1>{{ hero.headline }} <span class="italic-accent">{{ hero.headlineItalic }}</span></h1>
+    <p class="lede mt-1">{{ hero.lede }}</p>
+    <div class="hero-actions mt-2">
+      <a class="btn btn-primary btn-arrow" href="{{ hero.primaryCtaUrl }}" target="_blank" rel="noopener">{{ hero.primaryCtaLabel }}</a>
+      <a class="btn btn-secondary" href="{{ hero.secondaryCtaUrl }}" target="_blank" rel="noopener">{{ hero.secondaryCtaLabel }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="split">
+      <div class="prose">
+        {% for para in paragraphs %}
+        <p>{{ para | safe }}</p>
+        {% endfor %}
+      </div>
+      <aside>
+        <blockquote class="pullquote">
+          {{ pullquote }}
+          <span class="pullquote-attrib">{{ pullquoteAttrib }}</span>
+        </blockquote>
+      </aside>
+    </div>
+    <div class="text-center mt-4">
+      <a class="btn btn-primary btn-arrow" href="{{ site.bookSiteUrl }}" target="_blank" rel="noopener">{{ bookSiteCtaLabel }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">{{ media.eyebrow }}</span>
+    <h2>{{ media.heading }}</h2>
+    <p class="lede mt-1" style="max-width: 60ch;">{{ media.lede }}</p>
+    <div class="hero-actions mt-2">
+      <a class="btn btn-primary btn-arrow" href="{{ media.primaryCtaUrl }}">{{ media.primaryCtaLabel }}</a>
+      <a class="btn btn-secondary" href="mailto:{{ site.email }}">{{ media.secondaryCtaLabel }}</a>
+    </div>
+  </div>
+</section>
