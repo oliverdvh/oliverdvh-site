@@ -59,3 +59,5 @@ closing:
   ctaLabel: "Get in touch"
   ctaUrl: "/contact/"
 ---
+
+<!-- This file's content is managed by Decap CMS. Don't edit by hand. -->

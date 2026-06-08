@@ -65,3 +65,5 @@ newsletter:
   heading: "The next essay, straight to your inbox"
   body: "Free, roughly weekly, unsubscribe whenever you like. No tracking, no upsell."
 ---
+
+<!-- This file's content is managed by Decap CMS. Don't edit by hand. -->

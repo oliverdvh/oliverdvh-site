@@ -62,3 +62,5 @@ subscribe:
   heading: "Changing Stories on Substack"
   body: "Roughly weekly essays on sustainability, narrative change and the politics of the transition — plus the occasional dispatch from the Highlands. Free to read."
 ---
+
+<!-- This file's content is managed by Decap CMS. Don't edit by hand. -->

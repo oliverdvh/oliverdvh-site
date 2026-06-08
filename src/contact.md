@@ -29,3 +29,5 @@ side:
   noteHeading: "A note on what I take on"
   noteBody: "I keep advisory numbers small on purpose, so the work stays honest. I say no quite a lot. If your brief is a good fit, you'll know quickly; if it isn't, I'll try to point you to someone better placed than me."
 ---
+
+<!-- This file's content is managed by Decap CMS. Don't edit by hand. -->

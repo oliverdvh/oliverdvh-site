@@ -39,3 +39,5 @@ shortVersion:
 pullquote: "The world we have is not inevitable. It is the product of stories repeated so often they feel like facts. They are not."
 pullquoteAttrib: "— From the book"
 ---
+
+<!-- This file's content is managed by Decap CMS. Don't edit by hand. -->

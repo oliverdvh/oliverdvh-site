@@ -33,3 +33,5 @@ media:
   primaryCtaUrl: "/contact/"
   secondaryCtaLabel: "Email directly"
 ---
+
+<!-- This file's content is managed by Decap CMS. Don't edit by hand. -->
