@@ -2,7 +2,7 @@ backend:
   name: github
   repo: oliverdvh/oliverdvh-site
   branch: main
-
+  base_url: https://decap-oauth.olliedvh.workers.dev
 # After saving, Cloudflare Pages will rebuild and the change goes live in ~30 seconds.
 publish_mode: simple
 media_folder: "src/assets/uploads"
