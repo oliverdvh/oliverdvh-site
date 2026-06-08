@@ -1,0 +1,21 @@
+{
+  "title": "Oliver Dudok van Heel",
+  "brandName": "Oliver Dudok van Heel",
+  "brandSub": "Writer · Sustainability strategist",
+  "email": "oliverdvh@posteo.net",
+  "substackUrl": "https://changingstories.substack.com",
+  "bookSiteUrl": "https://www.changingstoriesbook.com",
+  "cislUrl": "https://www.cisl.cam.ac.uk/directory/oliver-dudok-van-heel",
+  "cuspUrl": "https://cusp.ac.uk/about/fellowship/o_dudok-van-heel/",
+  "footerTagline": "Writer, teacher and recovering sustainability consultant. Writing and advising on the corporate transition — and the stories that decide whether it works.",
+  "copyrightYear": "2026",
+  "basedIn": "Based in the Scottish Highlands",
+  "nav": [
+    { "url": "/", "label": "Home", "key": "home" },
+    { "url": "/about/", "label": "About", "key": "about" },
+    { "url": "/writing/", "label": "Writing", "key": "writing" },
+    { "url": "/speaking/", "label": "Teaching, speaking & advisory", "key": "speaking" },
+    { "url": "/book/", "label": "Book", "key": "book" },
+    { "url": "/contact/", "label": "Contact", "key": "contact" }
+  ]
+}

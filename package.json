@@ -1,0 +1,17 @@
+{
+  "name": "oliverdvh-site",
+  "version": "1.0.0",
+  "description": "Personal site for Oliver Dudok van Heel — sustainability writer & advisor.",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

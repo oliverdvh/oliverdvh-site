@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-label="Oliver Dudok van Heel">
+  <!-- O monogram with a small terracotta arc breaking it open: 'the world we have is not inevitable' -->
+  <circle cx="16" cy="16" r="11"/>
+  <path d="M 22.5 8.5 A 11 11 0 0 1 22.5 23.5" stroke="#c2562e" stroke-width="2.6" fill="none"/>
+</svg>

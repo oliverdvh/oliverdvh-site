@@ -1,0 +1,88 @@
+---
+layout: base.njk
+permalink: /contact/
+activeNav: contact
+pageTitle: "Contact — Oliver Dudok van Heel"
+description: "Get in touch with Oliver Dudok van Heel — keynotes, advisory, editors, podcasts, press copies."
+
+hero:
+  eyebrow: "Contact"
+  headline: "Say hello."
+  lede: "Editors, conference organisers, corporate teams, podcasters, festival programmers, readers, fellow travellers — if it's relevant to what you've read here, I'd like to hear it. A paragraph is plenty. I'll come back inside 48 hours."
+
+topicOptions:
+  - "Keynote / speaking engagement"
+  - "Board or ExCo workshop"
+  - "Advisory days"
+  - "Ghostwriting or thought leadership"
+  - "Editor / commission"
+  - "Podcast / interview"
+  - "Press copy of the book"
+  - "Festival or event"
+  - "Something else"
+
+side:
+  emailHeading: "Or email directly"
+  elsewhereHeading: "Elsewhere"
+  basedInHeading: "Based in"
+  basedIn: "The Scottish Highlands. Happy to work both remotely, in the UK and across Europe."
+  noteHeading: "A note on what I take on"
+  noteBody: "I keep advisory numbers small on purpose, so the work stays honest. I say no quite a lot. If your brief is a good fit, you'll know quickly; if it isn't, I'll try to point you to someone better placed than me."
+---
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">{{ hero.eyebrow }}</span>
+    <h1>{{ hero.headline }}</h1>
+    <p class="lede mt-1">{{ hero.lede }}</p>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="split">
+      <div>
+        <form id="contact-form" class="form-grid" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="org">Organisation (optional)</label>
+            <input type="text" id="org" name="org" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="topic">What's it about?</label>
+            <select id="topic" name="topic" required>
+              <option value="">Choose one…</option>
+              {% for opt in topicOptions %}<option>{{ opt }}</option>{% endfor %}
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">One paragraph</label>
+            <textarea id="message" name="message" required placeholder="Audience, date, where, and what they need to walk away with."></textarea>
+          </div>
+          <button class="btn btn-primary btn-arrow" type="submit">Send</button>
+          <div id="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <aside>
+        <h3>{{ side.emailHeading }}</h3>
+        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+
+        <h3 class="mt-3">{{ side.elsewhereHeading }}</h3>
+        <ul style="list-style:none; padding:0; font-family: var(--font-ui);">
+          <li style="margin-bottom: 0.5rem;"><a href="{{ site.substackUrl }}" target="_blank" rel="noopener">Substack — changingstories.substack.com</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="{{ site.bookSiteUrl }}" target="_blank" rel="noopener">The book — changingstoriesbook.com</a></li>
+        </ul>
+
+        <h3 class="mt-3">{{ side.basedInHeading }}</h3>
+        <p class="muted" style="font-family: var(--font-ui);">{{ side.basedIn }}</p>
+
+        <h3 class="mt-3">{{ side.noteHeading }}</h3>
+        <p style="font-family: var(--font-ui); font-size: 0.96rem; color: var(--ink-soft);">{{ side.noteBody }}</p>
+      </aside>
+    </div>
+  </div>
+</section>

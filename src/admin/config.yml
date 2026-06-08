@@ -1,0 +1,390 @@
+backend:
+  name: github
+  repo: REPLACE_WITH_GITHUB_USER/oliverdvh-site
+  branch: main
+
+# After saving, Cloudflare Pages will rebuild and the change goes live in ~30 seconds.
+publish_mode: simple
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+# Show a banner with link back to the live site
+site_url: https://oliverdudokvanheel.com
+display_url: https://oliverdudokvanheel.com
+logo_url: /assets/favicon.svg
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    description: "Edit any page of the site. Each page is one entry. Click a page, make changes, click Publish."
+    delete: false
+    editor:
+      preview: false
+    files:
+      # ---------- HOME ----------
+      - name: "home"
+        label: "Home page"
+        file: "src/index.njk"
+        format: "yaml-frontmatter"
+        fields:
+          - { label: "Page title (browser tab)", name: "pageTitle", widget: "string" }
+          - { label: "Search description", name: "description", widget: "text" }
+          - label: "Hero (top of page)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Small eyebrow text", name: "eyebrow", widget: "string" }
+              - { label: "Headline (main)", name: "headline", widget: "string" }
+              - { label: "Headline (italic accent)", name: "headlineItalic", widget: "string" }
+              - { label: "Intro paragraph", name: "lede", widget: "text" }
+              - { label: "Primary button label", name: "primaryCtaLabel", widget: "string" }
+              - { label: "Primary button URL", name: "primaryCtaUrl", widget: "string" }
+              - { label: "Secondary button label", name: "secondaryCtaLabel", widget: "string" }
+              - { label: "Secondary button URL", name: "secondaryCtaUrl", widget: "string" }
+          - label: "Two-pillars intro"
+            name: "pillarsIntro"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro paragraph", name: "lede", widget: "text" }
+          - label: "Pillar one"
+            name: "pillarOne"
+            widget: "object"
+            fields:
+              - { label: "Label (e.g. 'Pillar one')", name: "num", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Description", name: "body", widget: "text" }
+              - { label: "Bullets", name: "bullets", widget: "list", field: { label: "Bullet", name: "bullet", widget: "string" } }
+          - label: "Pillar two"
+            name: "pillarTwo"
+            widget: "object"
+            fields:
+              - { label: "Label (e.g. 'Pillar two')", name: "num", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Description", name: "body", widget: "text" }
+              - { label: "Bullets", name: "bullets", widget: "list", field: { label: "Bullet", name: "bullet", widget: "string" } }
+          - label: "Latest writing section"
+            name: "writingTeaser"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Link label (e.g. 'All writing →')", name: "ctaLabel", widget: "string" }
+              - { label: "Link URL", name: "ctaUrl", widget: "string" }
+              - label: "Fallback posts (shown if Substack feed is unreachable)"
+                name: "fallbackPosts"
+                widget: "list"
+                fields:
+                  - { label: "Date", name: "date", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+          - label: "Book panel"
+            name: "bookPanel"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraph 1", name: "body1", widget: "text" }
+              - { label: "Paragraph 2", name: "body2", widget: "text" }
+          - label: "Subscribe panel"
+            name: "subscribe"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+          - { name: "body", widget: "hidden" }
+
+      # ---------- ABOUT ----------
+      - name: "about"
+        label: "About page"
+        file: "src/about.njk"
+        format: "yaml-frontmatter"
+        fields:
+          - { label: "Page title (browser tab)", name: "pageTitle", widget: "string" }
+          - { label: "Search description", name: "description", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Headline (main)", name: "headline", widget: "string" }
+              - { label: "Headline (italic)", name: "headlineItalic", widget: "string" }
+          - { label: "Opening sentence (lede)", name: "lede", widget: "text" }
+          - label: "Paragraphs (HTML allowed: <strong>, <em>, <a href=>)"
+            name: "paragraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "p", widget: "text" }
+          - { label: "Day-to-day heading", name: "dayToDayHeading", widget: "string" }
+          - label: "Day-to-day bullets (HTML allowed)"
+            name: "dayToDay"
+            widget: "list"
+            field: { label: "Bullet", name: "bullet", widget: "text" }
+          - { label: "Short version heading", name: "shortVersionHeading", widget: "string" }
+          - label: "Short version bullets"
+            name: "shortVersion"
+            widget: "list"
+            field: { label: "Bullet", name: "bullet", widget: "string" }
+          - { label: "Pull quote text", name: "pullquote", widget: "text" }
+          - { label: "Pull quote attribution", name: "pullquoteAttrib", widget: "string" }
+          - { name: "body", widget: "hidden" }
+
+      # ---------- WRITING ----------
+      - name: "writing"
+        label: "Writing page"
+        file: "src/writing.njk"
+        format: "yaml-frontmatter"
+        fields:
+          - { label: "Page title", name: "pageTitle", widget: "string" }
+          - { label: "Search description", name: "description", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Intro paragraph", name: "lede", widget: "text" }
+              - { label: "Primary button label", name: "primaryCtaLabel", widget: "string" }
+              - { label: "Primary button URL", name: "primaryCtaUrl", widget: "string" }
+              - { label: "Secondary button label", name: "secondaryCtaLabel", widget: "string" }
+              - { label: "Secondary button URL", name: "secondaryCtaUrl", widget: "string" }
+          - label: "Two threads (cards)"
+            name: "threads"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }
+          - label: "Recent essays section"
+            name: "recent"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Fallback posts (used if Substack is offline)"
+                name: "fallbackPosts"
+                widget: "list"
+                fields:
+                  - { label: "Date", name: "date", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+          - label: "Elsewhere on the web"
+            name: "elsewhere"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "lede", widget: "text" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Date / period", name: "date", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+                  - { label: "Meta (e.g. domain)", name: "meta", widget: "string" }
+          - label: "Reports"
+            name: "reports"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "lede", widget: "text" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Meta (publisher · year)", name: "meta", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+                  - { label: "Cover image path (e.g. /assets/reports/x.png)", name: "cover", widget: "string" }
+                  - { label: "Cover alt text", name: "coverAlt", widget: "string" }
+                  - { label: "PDF path", name: "pdf", widget: "string" }
+                  - { label: "Original page URL (optional)", name: "original", widget: "string", required: false }
+          - label: "Newsletter panel"
+            name: "newsletter"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+          - { name: "body", widget: "hidden" }
+
+      # ---------- SPEAKING ----------
+      - name: "speaking"
+        label: "Teaching, speaking & advisory"
+        file: "src/speaking.njk"
+        format: "yaml-frontmatter"
+        fields:
+          - { label: "Page title", name: "pageTitle", widget: "string" }
+          - { label: "Search description", name: "description", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Headline (main)", name: "headline", widget: "string" }
+              - { label: "Headline (italic)", name: "headlineItalic", widget: "string" }
+              - { label: "Intro paragraph", name: "lede", widget: "text" }
+              - { label: "Button label", name: "ctaLabel", widget: "string" }
+              - { label: "Button URL", name: "ctaUrl", widget: "string" }
+          - label: "Teaching section"
+            name: "teaching"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro (HTML allowed)", name: "lede", widget: "text" }
+              - label: "Format boxes"
+                name: "formats"
+                widget: "list"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Body (HTML allowed)", name: "body", widget: "text" }
+              - { label: "Topics sub-heading", name: "topicsHeading", widget: "string" }
+              - label: "Topic cards"
+                name: "topics"
+                widget: "list"
+                fields:
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Body (HTML allowed)", name: "body", widget: "text" }
+          - label: "Advisory section"
+            name: "advisory"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "lede", widget: "text" }
+              - label: "Format boxes"
+                name: "formats"
+                widget: "list"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }
+              - { label: "Clients footnote", name: "clientsNote", widget: "text" }
+          - label: "Speaking section"
+            name: "speaking"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "lede", widget: "text" }
+              - label: "Talk cards"
+                name: "topics"
+                widget: "list"
+                fields:
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }
+          - label: "Closing CTA"
+            name: "closing"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "lede", widget: "text" }
+              - { label: "Button label", name: "ctaLabel", widget: "string" }
+              - { label: "Button URL", name: "ctaUrl", widget: "string" }
+          - { name: "body", widget: "hidden" }
+
+      # ---------- BOOK ----------
+      - name: "book"
+        label: "Book page"
+        file: "src/book.njk"
+        format: "yaml-frontmatter"
+        fields:
+          - { label: "Page title", name: "pageTitle", widget: "string" }
+          - { label: "Search description", name: "description", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Headline (main)", name: "headline", widget: "string" }
+              - { label: "Headline (italic)", name: "headlineItalic", widget: "string" }
+              - { label: "Intro paragraph", name: "lede", widget: "text" }
+              - { label: "Primary button label", name: "primaryCtaLabel", widget: "string" }
+              - { label: "Primary button URL", name: "primaryCtaUrl", widget: "string" }
+              - { label: "Secondary button label", name: "secondaryCtaLabel", widget: "string" }
+              - { label: "Secondary button URL", name: "secondaryCtaUrl", widget: "string" }
+          - label: "Body paragraphs (HTML allowed)"
+            name: "paragraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "p", widget: "text" }
+          - { label: "Pull quote", name: "pullquote", widget: "text" }
+          - { label: "Pull quote attribution", name: "pullquoteAttrib", widget: "string" }
+          - { label: "Book-site CTA label", name: "bookSiteCtaLabel", widget: "string" }
+          - label: "Media & events panel"
+            name: "media"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "lede", widget: "text" }
+              - { label: "Primary button label", name: "primaryCtaLabel", widget: "string" }
+              - { label: "Primary button URL", name: "primaryCtaUrl", widget: "string" }
+              - { label: "Email button label", name: "secondaryCtaLabel", widget: "string" }
+          - { name: "body", widget: "hidden" }
+
+      # ---------- CONTACT ----------
+      - name: "contact"
+        label: "Contact page"
+        file: "src/contact.njk"
+        format: "yaml-frontmatter"
+        fields:
+          - { label: "Page title", name: "pageTitle", widget: "string" }
+          - { label: "Search description", name: "description", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Intro paragraph", name: "lede", widget: "text" }
+          - label: "Topic dropdown options"
+            name: "topicOptions"
+            widget: "list"
+            field: { label: "Option", name: "opt", widget: "string" }
+          - label: "Side panel"
+            name: "side"
+            widget: "object"
+            fields:
+              - { label: "Email heading", name: "emailHeading", widget: "string" }
+              - { label: "Elsewhere heading", name: "elsewhereHeading", widget: "string" }
+              - { label: "'Based in' heading", name: "basedInHeading", widget: "string" }
+              - { label: "'Based in' text", name: "basedIn", widget: "text" }
+              - { label: "Note heading", name: "noteHeading", widget: "string" }
+              - { label: "Note body", name: "noteBody", widget: "text" }
+          - { name: "body", widget: "hidden" }
+
+      # ---------- SITE-WIDE ----------
+      - name: "site"
+        label: "Site-wide settings (email, footer, etc.)"
+        file: "src/_data/site.json"
+        format: "json"
+        fields:
+          - { label: "Site title", name: "title", widget: "string" }
+          - { label: "Brand name (header & footer)", name: "brandName", widget: "string" }
+          - { label: "Brand sub-line", name: "brandSub", widget: "string" }
+          - { label: "Contact email", name: "email", widget: "string" }
+          - { label: "Substack URL", name: "substackUrl", widget: "string" }
+          - { label: "Book site URL", name: "bookSiteUrl", widget: "string" }
+          - { label: "CISL profile URL", name: "cislUrl", widget: "string" }
+          - { label: "CUSP profile URL", name: "cuspUrl", widget: "string" }
+          - { label: "Footer tagline", name: "footerTagline", widget: "text" }
+          - { label: "Copyright year", name: "copyrightYear", widget: "string" }
+          - { label: "Footer 'Based in' line", name: "basedIn", widget: "string" }
+          - label: "Navigation menu"
+            name: "nav"
+            widget: "list"
+            fields:
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Internal key (don't change)", name: "key", widget: "string" }

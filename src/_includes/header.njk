@@ -1,0 +1,22 @@
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="/" aria-label="{{ site.brandName }} — home">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+        <circle cx="16" cy="16" r="11"/>
+        <path d="M 22.5 8.5 A 11 11 0 0 1 22.5 23.5" stroke="#c2562e" stroke-width="2.6" fill="none"/>
+      </svg>
+      <span>
+        <span class="brand-name">{{ site.brandName }}</span>
+        <span class="brand-sub">{{ site.brandSub }}</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <div class="nav-links">
+      {% for item in site.nav %}
+        <a href="{{ item.url }}"{% if item.key == activeNav %} class="is-active"{% endif %}>{{ item.label | safe }}</a>
+      {% endfor %}
+    </div>
+  </nav>
+</header>
