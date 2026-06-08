@@ -25,6 +25,7 @@ collections:
       - name: "home"
         label: "Home page"
         file: "src/index.njk"
+        extension: "njk"
         format: "yaml-frontmatter"
         fields:
           - { label: "Page title (browser tab)", name: "pageTitle", widget: "string" }
@@ -100,6 +101,7 @@ collections:
       - name: "about"
         label: "About page"
         file: "src/about.njk"
+        extension: "njk"
         format: "yaml-frontmatter"
         fields:
           - { label: "Page title (browser tab)", name: "pageTitle", widget: "string" }
@@ -134,6 +136,7 @@ collections:
       - name: "writing"
         label: "Writing page"
         file: "src/writing.njk"
+        extension: "njk"
         format: "yaml-frontmatter"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
@@ -221,6 +224,7 @@ collections:
       - name: "speaking"
         label: "Teaching, speaking & advisory"
         file: "src/speaking.njk"
+        extension: "njk"
         format: "yaml-frontmatter"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
@@ -298,6 +302,7 @@ collections:
       - name: "book"
         label: "Book page"
         file: "src/book.njk"
+        extension: "njk"
         format: "yaml-frontmatter"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
@@ -337,6 +342,7 @@ collections:
       - name: "contact"
         label: "Contact page"
         file: "src/contact.njk"
+        extension: "njk"
         format: "yaml-frontmatter"
         fields:
           - { label: "Page title", name: "pageTitle", widget: "string" }
