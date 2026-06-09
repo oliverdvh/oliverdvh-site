@@ -14,6 +14,8 @@ hero:
   primaryCtaUrl: "/speaking/"
   secondaryCtaLabel: "Read recent writing"
   secondaryCtaUrl: "/writing/"
+  tertiaryCtaLabel: "My upcoming book"
+  tertiaryCtaUrl: "/book/"
 
 pillarsIntro:
   eyebrow: "What I do"

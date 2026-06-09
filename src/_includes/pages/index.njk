@@ -11,6 +11,7 @@ layout: base.njk
       <div class="hero-actions">
         <a class="btn btn-primary btn-arrow" href="{{ hero.primaryCtaUrl }}">{{ hero.primaryCtaLabel }}</a>
         <a class="btn btn-secondary" href="{{ hero.secondaryCtaUrl }}">{{ hero.secondaryCtaLabel }}</a>
+        {% if hero.tertiaryCtaLabel %}<a class="btn btn-secondary" href="{{ hero.tertiaryCtaUrl }}">{{ hero.tertiaryCtaLabel }}</a>{% endif %}
       </div>
     </div>
     <div class="hero-portrait">
