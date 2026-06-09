@@ -11,7 +11,7 @@ pillarsIntro:
     including our leaders, are quietly convinced they can't.
 pillarOne:
   num: Pillar one
-  heading: Corporate sustainability, for return and impact
+  heading: Corporate sustainability, delivering return and impact
   body: I help boards and executive teams understand the urgency and value of the
     sustainability transition, and find the business case that can support it.
     No jargon, no greenwash, no pretending that easy answers exist.
