@@ -11,7 +11,7 @@ pillarsIntro:
     including our leaders, are quietly convinced they can't.
 pillarOne:
   num: Pillar one
-  heading: Corporate sustainability, honestly
+  heading: Corporate sustainability, for return and impact
   body: I help boards and executive teams understand the urgency and value of the
     sustainability transition, and find the business case that can support it.
     No jargon, no greenwash, no pretending that easy answers exist.
@@ -57,10 +57,10 @@ hero:
   headline: The world we have is not inevitable.
   tertiaryCtaLabel: My upcoming book
   secondaryCtaLabel: Read recent writing
-  lede: Hello, I'm Oliver. I write, teach and advise on corporate sustainability,
-    and on the cultural stories that quietly decide whether any of it works.
-    After twenty-five years inside the system, I've come to think the stories
-    matter more than the spreadsheets.
+  lede: Hello, I'm Oliver Dudok van Heel. I write, teach and advise on corporate
+    sustainability, and on the cultural stories that quietly decide whether any
+    of it works. After twenty-five years inside the system, I've come to think
+    the stories matter more than the spreadsheets.
 writingTeaser:
   eyebrow: Latest writing
   heading: From the Substack & commissioned essays
