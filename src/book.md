@@ -22,7 +22,7 @@ paragraphs:
     hold the existing system together, shows where each one came from, why it no
     longer fits the world we live in, and traces practical paths beyond them.
     It's the book I wish I'd had a quarter of a century ago, and the one I'm
-    writing now because no one else has yet.
+    writing now because, well, I feel compelled to.
   - >
     It's for anyone who senses that the way things are is not the way they have
     to be, written in a personal style that weaves in my core belief in humanity
