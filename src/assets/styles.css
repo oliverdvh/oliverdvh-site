@@ -617,3 +617,28 @@ h4 { font-size: 1.15rem; line-height: 1.3; }
   font-size: 0.88rem;
   padding: 0.55rem 1.1rem;
 }
+
+/* ---------- Contact page additions ---------- */
+.hp-field {
+  position: absolute !important;
+  left: -10000px !important;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.reveal-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--accent, #c2562e);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.reveal-link:hover { color: var(--ink, #1a1a1a); }
+.form-status { margin-top: 0.5rem; font-family: var(--font-ui); font-size: 0.96rem; }
+.form-status--success { color: #2c6e3f; }
+.form-status--error { color: #a43f1c; }
+.form-status--info { color: var(--ink-soft, #555); }
+.cf-turnstile { margin-top: 0.5rem; }

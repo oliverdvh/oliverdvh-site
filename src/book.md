@@ -38,7 +38,8 @@ media:
     ghostwritten companion pieces — please email or use the contact form.
   primaryCtaLabel: Request the introductory chapter
   primaryCtaUrl: /contact/
-  secondaryCtaLabel: Email directly
+  secondaryCtaLabel: Use the contact form
+  secondaryCtaUrl: /contact/
 layout: pages/book.njk
 permalink: /book/
 activeNav: book

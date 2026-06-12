@@ -71,25 +71,5 @@ document.addEventListener('DOMContentLoaded', () => {
       a.addEventListener('click', () => links.classList.remove('is-open')));
   }
 
-  // Contact form — client-side mailto fallback so the site works
-  // before a backend is wired up. Replace with Formspree / Wix Forms / etc.
-  const form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      const name    = encodeURIComponent(data.get('name') || '');
-      const subject = encodeURIComponent(`Website enquiry: ${data.get('topic') || 'general'}`);
-      const body    = encodeURIComponent(
-        `Name: ${data.get('name') || ''}\n` +
-        `Organisation: ${data.get('org') || ''}\n` +
-        `Topic: ${data.get('topic') || ''}\n\n` +
-        `${data.get('message') || ''}`
-      );
-      const to = 'oliverdvh@posteo.net';
-      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-      const status = document.getElementById('form-status');
-      if (status) status.textContent = 'Opening your email client to send the message…';
-    });
-  }
+  // Contact form is handled by /assets/contact.js on the contact page.
 });

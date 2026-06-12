@@ -42,7 +42,7 @@ layout: base.njk
     <p class="lede mt-1" style="max-width: 60ch;">{{ media.lede }}</p>
     <div class="hero-actions mt-2">
       <a class="btn btn-primary btn-arrow" href="{{ media.primaryCtaUrl }}">{{ media.primaryCtaLabel }}</a>
-      <a class="btn btn-secondary" href="mailto:{{ site.email }}">{{ media.secondaryCtaLabel }}</a>
+      <a class="btn btn-secondary" href="{{ media.secondaryCtaUrl or '/contact/' }}">{{ media.secondaryCtaLabel }}</a>
     </div>
   </div>
 </section>

@@ -9,6 +9,7 @@
   "cuspUrl": "https://cusp.ac.uk/about/fellowship/o_dudok-van-heel/",
   "footerTagline": "Writer, teacher and recovering sustainability consultant. Writing and advising on the corporate transition — and the stories that decide whether it works.",
   "copyrightYear": "2026",
+  "turnstileSiteKey": "",
   "basedIn": "Based in the Scottish Highlands",
   "nav": [
     { "url": "/", "label": "Home", "key": "home" },
