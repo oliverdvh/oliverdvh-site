@@ -1,4 +1,4 @@
-// Contact-page JS: reveal email on click + submit form to /api/contact
+// Contact-page JS: reveal email on click + submit form to Web3Forms
 (function () {
   // ----- Reveal email -----
   var btn = document.getElementById("reveal-email");
@@ -31,23 +31,47 @@
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
+
+    // Honeypot — if filled, silently pretend success.
+    var hp = form.querySelector('input[name="website"]');
+    if (hp && hp.value && hp.value.trim() !== "") {
+      form.reset();
+      setStatus("Thanks — your message is on its way. I'll come back to you inside 48 hours.", "success");
+      return;
+    }
+
     setStatus("Sending…", "info");
     submitBtn.disabled = true;
 
     var data = new FormData(form);
 
+    // Web3Forms expects access_key and a subject (we build one from the topic)
+    var accessKey = form.getAttribute("data-access-key") || "";
+    if (!accessKey) {
+      setStatus("Form is not yet configured. Please use the email link instead.", "error");
+      submitBtn.disabled = false;
+      return;
+    }
+    data.set("access_key", accessKey);
+
+    var name = (data.get("name") || "").toString().trim();
+    var org = (data.get("org") || "").toString().trim();
+    var topic = (data.get("topic") || "").toString().trim();
+    var subject = "Website contact: " + topic + " — " + name + (org ? " (" + org + ")" : "");
+    data.set("subject", subject);
+    data.set("from_name", "oliverdudokvanheel.com");
+
     try {
-      var res = await fetch("/api/contact", { method: "POST", body: data });
+      var res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data });
       var json = await res.json().catch(function () { return {}; });
-      if (res.ok && json.ok) {
+      if (res.ok && json.success) {
         form.reset();
-        // Reset Turnstile widget if present
         if (window.turnstile && typeof window.turnstile.reset === "function") {
           try { window.turnstile.reset(); } catch (e) {}
         }
         setStatus("Thanks — your message is on its way. I'll come back to you inside 48 hours.", "success");
       } else {
-        setStatus(json.error || "Something went wrong. Please try again.", "error");
+        setStatus((json && json.message) || "Something went wrong. Please try again.", "error");
         submitBtn.disabled = false;
       }
     } catch (err) {

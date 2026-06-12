@@ -19,7 +19,7 @@ layout: base.njk
   <div class="container">
     <div class="split">
       <div>
-        <form id="contact-form" class="form-grid" novalidate>
+        <form id="contact-form" class="form-grid" novalidate data-access-key="{{ site.web3formsAccessKey or '' }}">
           <div class="field">
             <label for="name">Your name</label>
             <input type="text" id="name" name="name" required autocomplete="name" />
@@ -53,13 +53,14 @@ layout: base.njk
           {# Cloudflare Turnstile widget. Site key comes from CMS → Site-wide settings. #}
           {% if site.turnstileSiteKey %}
           <div class="cf-turnstile" data-sitekey="{{ site.turnstileSiteKey }}" data-theme="light"></div>
-          {% else %}
+          {% endif %}
+          {% if not site.web3formsAccessKey %}
           <p class="muted" style="font-family: var(--font-ui); font-size: 0.92rem;">
-            (The bot check is not yet configured. The form is temporarily disabled. Please use the email link in the sidebar.)
+            (The contact form is not yet configured. Please use the email link in the sidebar.)
           </p>
           {% endif %}
 
-          <button class="btn btn-primary btn-arrow" type="submit"{% if not site.turnstileSiteKey %} disabled{% endif %}>Send</button>
+          <button class="btn btn-primary btn-arrow" type="submit"{% if not site.web3formsAccessKey %} disabled{% endif %}>Send</button>
           <div id="form-status" role="status" aria-live="polite"></div>
         </form>
       </div>

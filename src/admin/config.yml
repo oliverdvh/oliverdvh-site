@@ -385,6 +385,7 @@ collections:
           - { label: "Copyright year", name: "copyrightYear", widget: "string" }
           - { label: "Footer 'Based in' line", name: "basedIn", widget: "string" }
           - { label: "Cloudflare Turnstile site key (for contact form)", name: "turnstileSiteKey", widget: "string", required: false, hint: "Paste the public site key from Cloudflare Turnstile. Leave blank to disable the contact form's bot check." }
+          - { label: "Web3Forms access key (for contact form delivery)", name: "web3formsAccessKey", widget: "string", required: false, hint: "Paste the access key from web3forms.com. This is what makes the contact form actually deliver email. Leave blank to disable the form." }
           - label: "Navigation menu"
             name: "nav"
             widget: "list"
