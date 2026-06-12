@@ -45,6 +45,20 @@
 
     var data = new FormData(form);
 
+    // Don't send the Turnstile token to Web3Forms (server-side verification is a Pro feature
+    // and we don't need it: the widget already gated the submission client-side, and Web3Forms
+    // has its own spam detection). Stripping it avoids the 'upgrade to Pro' rejection.
+    data.delete("cf-turnstile-response");
+
+    // But: make sure the user actually completed the Turnstile challenge before we submit.
+    var turnstileField = form.querySelector('[name="cf-turnstile-response"]');
+    var turnstileWidget = form.querySelector('.cf-turnstile');
+    if (turnstileWidget && (!turnstileField || !turnstileField.value)) {
+      setStatus("Please complete the verification check above before sending.", "error");
+      submitBtn.disabled = false;
+      return;
+    }
+
     // Web3Forms expects access_key and a subject (we build one from the topic)
     var accessKey = form.getAttribute("data-access-key") || "";
     if (!accessKey) {
